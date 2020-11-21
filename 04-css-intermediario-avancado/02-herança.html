@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Herança e especificidade</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/02-estilo.css">
+	</head>
+
+	<body>
+		<div id="pagina">
+			<h2 class="rosa" id="cinza">LOREM IPSUM DOLO SIT AMET</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco.</p>
+
+
+			<p>se um seletor for mais específico que outro a regra mais específica será aplicada (terá precedência sobre regras mais gerais)</p>
+
+			<p>
+				
+				/*se um seletor for mais específico que outro a regra mais específica será aplicada (terá precedência sobre regras mais gerais)*/<br>
+*{<br>
+	color: green;<br>
+}<br>
+
+h2{<br>
+	color: orange;<br>
+	/*tem prioridade sobre o universal*/<br>
+}<br>
+h2.rosa{<br>
+	/*tem prioridade sobre o h2 acima*/<br>
+	color: pink;<br>
+}<br>
+h2#cinxa{<br>
+	/*temp rpioridade sobre o h2.rosa acima*/<br>
+	color: gray;<br>
+}<br>
+			</p>
+		</div>
+
+	</body>
+</html>

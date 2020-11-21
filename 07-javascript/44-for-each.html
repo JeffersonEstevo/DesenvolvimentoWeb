@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('<br>')
+
+		//forEach() é função para array (NÃO É ESTRUTURA DE REPETIÇÃO)
+
+		// OBS.: forEach() só atua sobre valores numéricos, partindo do 0, não precisa ser sequqencial
+
+		//Só lista valores com índices >= 0
+
+
+		var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+		console.log(listaFuncionarios)
+		document.write(listaFuncionarios[3])
+
+
+		//forEach(valor, indice, array)
+		listaFuncionarios.forEach(function(valor, indice, array){
+
+			console.log('indice ' + indice + ' | valor: ' + valor)
+
+			console.log(array)
+
+		})
+
+			
+
+/*-----------------------------------------------------*/
+		//alterando um valor no array
+
+		var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+		console.log(listaFuncionarios)
+
+		//forEach(valor, indice, array)
+		listaFuncionarios.forEach(function(valor, indice, array){
+
+			console.log('indice ' + indice + ' | valor: ' + valor)
+
+			if(valor == 'Lucas'){
+				array[indice] = 'Um novo valor'
+			}
+
+
+		})
+
+			console.log(listaFuncionarios)
+			document.write('<br>' + listaFuncionarios[3])
+
+/*------------------------------------------------------*/
+		//função callback para imprimir somente o valor
+
+
+		document.write('<br><br>/*-----------------------------------*/<br>')
+
+		document.write('acessando apenas os valores do array (função callback) <br><br>')
+
+		listaFuncionarios.forEach(function(valor){
+			document.write(valor + '<br>')			
+		})
+
+
+/*------------------------------------------------------*/
+		//função callback para imprimir somente o valor e índice
+
+
+		document.write('<br><br>/*-----------------------------------*/<br>')
+
+		document.write('acessando apenas os valores do array (função callback) <br><br>')
+
+		listaFuncionarios.forEach(function(valor, indice){
+			document.write(valor + ' ----- ' + indice +'<br>')			
+		})
+
+
+/*------------------------------------------------------*/
+		//função acessando todos os parâmetros
+
+
+		document.write('<br><br>/*-----------------------------------*/<br>')
+
+		document.write('acessando apenas os valores do array (função callback) <br><br>')
+
+		listaFuncionarios.forEach(function(valor, indice, array){
+			document.write(valor + ' ----- ' + indice + ' ----- ' + '[' + array + ']' + '<br>')			
+		})
+/*---------------------------------------------------*/
+		//podemos encapsular a função em uma varíavel também
+
+		document.write('<br><br>/*-----------------------------------*/<br>')
+
+		document.write('encapsulando função em uma variável [TÉCNICA WRAPPER "embrulhar"] <br><br>')
+
+		var lista = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+		var x = function(valor, indice){
+			document.write(valor + ' ----- ' + indice +'<br>')
+		}
+		 lista.forEach(x)
+
+	</script>
+	
+</head>
+<body>		
+
+</body>
+</html>

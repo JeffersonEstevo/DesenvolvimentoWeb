@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+
+    //poderia ser
+    //requisição http
+    //resposta http
+    let Bicicleta1 = {
+        cor: 'Branca',
+        marcha: 'Única',
+        aro: 12,
+        pedalar(){console.log('Método pedalar executado')}
+
+    }
+
+    let Bicicleta2 = {
+        cor: 'Vermelha',
+        marcha: '18',
+        aro: 26,
+        pedalar(){console.log('Método pedalar executado')}
+
+    }
+
+
+    console.log(Bicicleta1)
+    console.log(Bicicleta2)
+/***************************************************/
+
+
+    let BicicletaFactory = function(cor, marcha, aro){
+
+
+         //aqui poderiamos implementar a lógica para tratar:
+    //requisição http
+    //resposta http
+
+
+        return {
+            cor,
+            marcha,
+            aro,
+            pedalar(){console.log('Método pedalar executado')}
+        } 
+    }
+
+  let Bicicleta3 = BicicletaFactory('Vermelha', '18', 26)
+  console.log(Bicicleta3)
+
+  let Bicicleta4 = BicicletaFactory('Preta', '21', 29)
+  console.log(Bicicleta4)
+
+  //console.log(`Cor: ${Bicicleta3.cor}`)
+  //Bicicleta3.pedalar()
+
+
+
+
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>    

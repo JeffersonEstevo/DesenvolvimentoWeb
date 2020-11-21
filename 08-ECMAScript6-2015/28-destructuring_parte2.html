@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+   
+    //DESTRUCTURING
+
+    //composição
+    let produto = {
+        descricao: 'Notebook',
+        preco: 1800,
+        detalhes: {
+            fabricante: 'abc',
+            modelo: 'xyz'
+        }
+    }
+
+
+
+    //token
+    //array => []
+    //objeto => {}
+
+    //let { descricao, preco } = produto
+
+
+    //podemos renomear (ou não) as variáveis usando : 
+    //desconto vai retornar undefined pq não existe no objeto literal
+    //let { descricao: d, preco: p, desconto} = produto
+   
+    //mas podemos atribuir um valor default para desconto
+    //e não podemos alterar se o valor já existir no objeto literal, por exemplo, preco p não será alterado abaixo:
+    let { descricao: d, preco: p = 600, desconto = 5} = produto
+    console.log(d, p, desconto)
+
+
+    let { detalhes: { fabricante, modelo }} = produto
+    console.log(fabricante, modelo)
+
+
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>    

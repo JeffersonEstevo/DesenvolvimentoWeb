@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('<br>')
+
+		var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+		console.log(listaConvidados)
+
+
+		//for( variavel in array ) percorre um array até o final (quando recebe undefined)
+		for(var x in listaConvidados){
+			console.log('Índice: ' + x + ' |' +' valor: ' + listaConvidados[x] )
+		}
+
+		/*-----------------------------------------------*/
+
+
+		//forin pode percorrer arays com índices customizados (ESSA É A PRNCIPAL DIFERENÇA PARA O FOR)
+		var convidados = Array()
+
+		convidados['a'] = 'Jorge'
+		convidados[10] = 'Jamilton'
+		convidados['zebra'] = 'José'
+		convidados[-1] = 'Ana'
+		convidados[true] = 'Maria'
+
+		console.log(convidados)
+
+		for(var x in convidados){
+			console.log('Índice: ' + x + ' |' +' valor: ' + convidados[x] )
+		}
+
+
+	
+	</script>
+	
+</head>
+<body>		
+
+</body>
+</html>

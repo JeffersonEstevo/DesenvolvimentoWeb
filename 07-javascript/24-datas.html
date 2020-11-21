@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('</br>')
+
+		var data = new Date()
+
+		//getDate()
+		//retorna o dia a partir do sistema operacional
+		document.write(data.getDate())
+		document.write('</br>')
+
+		//getMonth()
+		//retorna o mês a partir do sistema operacional
+		document.write(data.getMonth() + 1)
+		document.write('</br>')
+
+		//getFullYear()
+		//retorna o ano a partir do sistema operacional
+		document.write(data.getFullYear())
+		document.write('</br>')
+		document.write('</br>')
+
+		document.write(data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear())
+
+		document.write('</br>')
+		document.write('</br>')
+	
+
+		//adicionando um dia
+		document.write(data.toString())
+		data.setDate(data.getDate() + 1)
+		document.write('<hr />')
+		document.write(data.toString() + '</br>' + '</br>')
+		
+		//adicionando varios dias
+		//o metodo faz os calculos aumentando os dias, meses e anos se o valor for grande
+		document.write(data.toString())
+		data.setDate(data.getDate() + 530)
+		document.write('<hr />')
+		document.write(data.toString() + '</br>' + '</br>')
+
+
+		//removendo um dia
+		document.write(data.toString())
+		data.setDate(data.getDate() - 1)
+		document.write('<hr />')
+		document.write(data.toString() + '</br>' + '</br>')
+
+
+
+
+
+
+		document.write('</br>'+'</br>')
+		//adicionando um mes
+		data2 = new Date()
+		document.write(data2.toString())
+		data2.setMonth(data2.getMonth() + 1)
+		document.write('<hr />')
+		document.write(data2.toString() + '</br>' + '</br>')
+
+		//removendo um mes
+		data2 = new Date()
+		document.write(data2.toString())
+		data2.setMonth(data2.getMonth() - 1)
+		document.write('<hr />')
+		document.write(data2.toString() + '</br>' + '</br>')
+
+		//adicionando varios meses
+		//o metodo faz os calculos aumentando os dias, meses e anos se o valor for grande
+		document.write(data2.toString())
+		data2.setMonth(data2.getMonth() + 530)
+		document.write('<hr />')
+		document.write(data2.toString() + '</br>' + '</br>')
+
+
+
+
+
+		document.write('</br>'+'</br>')
+		//adicionando um ano
+		data3 = new Date()
+		document.write(data3.toString())
+		data3.setFullYear(data3.getFullYear() + 1)
+		document.write('<hr />')
+		document.write(data3.toString() + '</br>' + '</br>')
+
+		//removendo um ano
+		data3 = new Date()
+		document.write(data3.toString())
+		data3.setFullYear(data3.getFullYear() - 1)
+		document.write('<hr />')
+		document.write(data3.toString() + '</br>' + '</br>')
+
+		//adicionando varios anos
+		//o metodo faz os calculos aumentando os dias, meses e anos se o valor for grande
+		document.write(data3.toString())
+		data3.setFullYear(data3.getFullYear() + 530)
+		document.write('<hr />')
+		document.write(data3.toString() + '</br>' + '</br>')
+
+
+		document.write('<h3>' + 'Fazendo cálculos com datas: ' + '</h3>'  )
+		/*Diferença entre datas*/
+		// o Date pode receber esses parâmetros:
+		//var dia = new Date(ano, mes, dia, horas, minutos, segundos, milissegundos)
+		//OBS.: a contagem dos meses começa por 0 = janeiro
+
+		//15/01/2017
+		var d1 = new Date(2017, 0, 15)
+
+
+		//23/02/2017
+		var d2 = new Date(2017, 1, 23)
+
+		document.write(d1.toString())
+		document.write('<hr />')
+		document.write(d2.toString())
+
+
+		document.write('<br /><br /><hr />')
+		//converter datas para algo que possamos calcular
+
+		//getTime() retorna a quandtidade de milissegundo entre (01/01/1970) até a data atual
+		document.write(d1.getTime())
+		document.write('<hr />')
+		document.write(d2.getTime())
+
+		//encontrar a qtde de milissegundos entre d1 e d2
+		document.write('<br /><br /><hr />')
+		var milissegundos_entre_datas = Math.abs(d1.getTime() - d2.getTime())
+		document.write(milissegundos_entre_datas)
+
+		//1 dia tem 24h, cada hora tem 60m, cada minuto tem 60s, cada segundo tem 1000ms
+		//quantos milissegundos existem em um dia?
+
+		var milissegundos_por_dia = (1*24*60*60*1000) 
+		document.write('</br> 1 dia tem: ' + milissegundos_por_dia + ' milissegundos')
+
+		document.write('<br /><br /><hr />')
+		document.write('A diferença entre data1 e dataé de: ' + Math.ceil(milissegundos_entre_datas/milissegundos_por_dia) + ' dias')
+
+
+
+
+
+
+
+
+		
+
+
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

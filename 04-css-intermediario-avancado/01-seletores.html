@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Seletores</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	</head>
+
+	<body>
+		<div id="cabecalho">
+			cabeçalho com borda cinza traçejada
+			<h1>Título da página</h1>
+			<p>Parágrafo da página 1</p>
+
+		</div>
+
+
+		<span class="verde">Teste span</span>
+		<p class="laranja">Teste parágrao</p>
+
+
+		<ul>
+			<li>
+				<a href="">Link 1</a>
+			</li>
+
+			<li>
+				<a href="">Link 2</a>
+			</li>
+
+		</ul>
+
+		<a href="">Link teste fora do li (não recebe a fomatação)</a><br><br>
+
+		
+
+		<p>
+			<span>
+			Parágrafo <a href="">Clique aqui</a> o link fica verde mesmo a tag "a" não sendo filho direto da tag "p"
+			</span>
+
+		</p>
+
+		<div>
+			<h1>Título h1 irmão de p</h1>
+			
+				<p>Parágrafo 1 formatado pelo seletor irmão adjacente de h1</p>
+				<p>Parágrafo 2 não recebe a formatação pelo seletor irmão adjacente de h1 </p>
+
+
+				<h2>Título h2 irmão de dois p's</h2>
+			
+				<p>Parágrafo 1 formatado pelo seletor irmão geral de h2</p>
+				<p>Parágrafo 2 não recebe a formatação pelo seletor irmão geral de h2 </p>
+			
+		</div>
+
+	</body>
+</html>

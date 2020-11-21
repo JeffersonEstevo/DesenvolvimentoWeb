@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    //PROTOTYPE CHAIN
+
+
+    Object.prototype.attr50 = 'Z'
+
+    //os 3 abixos são "filhos de" Object.protoype
+    let animal = { attr1: 'a'}
+    let vertebrado = { __proto__: animal, attr2: 'b'}
+    let ave = { __proto__: vertebrado, attr3: 'c' , attr2: 'x' }  //para fazer ave herdar atributos de   vertebrado
+    let ave1 = { attr4: 'd'}
+
+    console.log(ave1.attr2)// dá undefined pois são Objects diferentes
+
+     console.log(ave.attr3, ave.attr2, ave.attr1, ave.attr50)// aqui já conseguimos acessar o atributo b de vertebrado (se apagarmos o attr:2 'x' nele próprio), e o atributo a de animal e o c já é seu róprio atributo
+     //o proottype ppr defaul é o Object, por isso também é impresso o Z
+     
+
+
+
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>    

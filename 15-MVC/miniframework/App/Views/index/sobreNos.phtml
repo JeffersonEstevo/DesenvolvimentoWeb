@@ -1,0 +1,42 @@
+<h1>Sobre Nós</h1>
+<hr />
+
+<!--forma alternativa de fazer os códigos abaixo:-->
+
+<!-- 
+
+<?php foreach($this->view->dados as $indice => $info) { ?>
+	<h1> <?= $info['titulo']?> </h1>
+	<br />
+	<?= $info['descricao'] ?>
+	<hr />
+<?php } ?>
+
+
+-->
+
+
+<?php
+	//echo 'Chegamos ao IndexController e disparamos o action sobreNos';
+	
+
+	/*	echo '<pre>';
+		print_r($this->view->dados);
+		echo '</pre>';
+	*/
+
+foreach ($this->view->dados as $indice => $info) {
+		//echo $valor.'<br>';
+
+		echo '<h1>'.$info['titulo'].'</h1>';	
+		echo '<br>';
+		echo $info['descricao'];	
+		echo '<hr>';
+		
+	}
+
+?>
+
+
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			.div{
+				width: 80px;
+				height: 80px;
+				border: solid 1px #000;
+				background-color: #aaa
+			}
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+
+			/*
+			//ANIMAÇÕES:
+			//animate(<propriedades visuais>, <opções de transição>)
+
+			//atuam sobre qualquer propriedade CSS numérica (font-size, margin, padding, border-radius...)
+
+			método animate:
+			animate( objeto literal de estado desejado, objeto lieral com propriedades )
+
+			ou
+
+			animate( objeto literal de estado desejado, tempo de transição)
+			*/
+
+			/*PADRÃO:
+			$(document).ready(() => {
+				$('button').on('click' , () => {
+					$('div').animate({}, {})
+				})
+
+
+			})
+			*/
+
+		/*	$(document).ready(() => {
+				$('button').on('click' , () => {
+					$('div').animate({
+						'width': '160px',
+						'height': '160px',
+						'margin-left': '200px',
+						'margin-top': '200px',
+						'border-radius': '25px'
+					}, 2000)
+				})
+
+
+			})
+		*/
+
+	/*	$(document).ready(() => {
+				$('button').on('click' , () => {
+					$('div').animate({
+						'width': '160px',
+						'height': '160px',
+						'margin-left': '200px',
+						'margin-top': '200px',
+						'border-radius': '25px'
+					}, 
+					{
+						duration: 3500,
+						start: () => { console.log('animação iniciada') },
+						complete: () => { console.log('animação finalizada') }
+					})
+				})
+
+			})
+	*/
+
+	$(document).ready(() => {
+				$('button').on('click' , () => {
+
+					let visualFinal = {
+						'width': '160px',
+						'height': '160px',
+						'margin-left': '200px',
+						'margin-top': '200px',
+						'border-radius': '25px'
+					}
+
+					$('#div1').animate(visualFinal, 
+					{
+						duration: 3500,
+						start: () => { console.log('animação iniciada') },
+						complete: () => { 
+
+							$('#div2').animate(visualFinal)
+
+						 }
+					})
+				})
+
+			})
+		</script>
+	</head>
+
+	<body>
+		
+		<button type="button">Iniciar animação</button>
+		<div id="div1" class="div"></div>
+		<div id="div2" class="div"></div>
+			
+	</body>
+
+</html>

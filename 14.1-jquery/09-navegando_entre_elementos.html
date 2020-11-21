@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script>
+
+		</script>
+	</head>
+
+	<body>
+		
+		<div id="topo">
+			<ul class="menu">
+				<li class="item"></li>
+				<li class="item"></li>
+			</ul>
+		</div>
+
+		<div id="pagina">
+			<div class="secao1">
+				<div class="subSecao"></div>
+			</div>
+			
+			<div class="secao2">
+				<h1></h1>
+			</div>
+		</div>		
+		
+		<div id="rodape">
+			<div>
+				<p></p>	
+				<span id="opcao1"></span>
+			</div>
+		</div>
+
+		<p>Ver comandos disponíveis no código fonte!</p>
+
+		<!--COMANDOS DA AULA
+			
+			parent() - retorna primeiro elemento pai
+			closest() - retorna em toda a árvore até encontrar o primeiro pai passado por parâmetro
+			find() - desce em toda a árvore até encontrar o primeiro filho passado por parâmetro	
+
+			no console:
+
+			$('.secao1').parent() //retorna para o elemetno pai do elemento em questão
+
+			$('.subSecao').closest('#pagina') // procura pelo primeiro elemento pai com o parâmetro especificado(#página)
+
+			$('.item').closest('#topo') //buscar por id não faz muito sentido, pois como o id é único poderiamos buscar diretamente o elemento, porém podemos sim fazer isso também
+
+			$('.item').closest('ul') 
+
+			$('#rodape').find('p') //busca pelo primeiro elemento p filho de #rodapé
+
+			$('.secao1').parent().find('h1')
+
+			$('.subSecao').parent().parent().find('h1')
+
+
+		-->
+
+	</body>
+
+</html>

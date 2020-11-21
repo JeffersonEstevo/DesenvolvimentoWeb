@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+       
+        var serie = 'Firends'
+
+        {
+            var serie = 'The Walking Dead'
+            console.log('dentro do bloco:' + serie)
+        }
+
+         console.log('global: ' + serie)//dá erro com var pois sobrescreve o valor da variável serie criada antes
+
+         {}//foi necessário para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

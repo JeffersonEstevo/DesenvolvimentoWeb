@@ -1,0 +1,50 @@
+/***************Barra de navegação vertical***********/
+ul.lista1{
+	
+	list-style-type: none;/*retira os marcadores da lista*/
+	margin: 0;
+	padding: 0;
+
+}
+
+li.lista1{
+	padding: 10px 20px;
+
+	background: url(../imagens/seta.png) no-repeat left center;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+ul a{
+	/*border: 1px solid red;*/
+	width: 200px;
+	height: 40px;
+	display: block;
+	color: #000;
+	text-decoration: none;
+	text-indent: 40px;
+	line-height: 40px;
+	background: #f7b600 url(../imagens/menu.png) no-repeat left bottom;
+}
+a:hover, .selecionado a{
+	background-position: right bottom; /*movimenta o background*/
+	background-color: #f99200;
+	color: white;
+}
+
+#index .home a,
+#sobre .sobre a,
+#servicos .servicos a,
+#noticias .noticias a,
+#contato .contato a
+{
+
+	background-position: right bottom; 
+	background-color: #f99200;
+	color: white;
+}

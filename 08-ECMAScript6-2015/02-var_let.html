@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        //3 escopos: global, função e bloco
+
+        var serie = 'Friends'
+
+        console.log(serie)
+
+        function x(){
+        	
+        	var serie = 'Game Of Thrones'
+        	//imprime Game Of Thrones pq está em escopo de função
+        	console.log('função x: ' + serie)
+
+        	 if(true){
+        	 	//Continua no escopo da função, então imprime Game Of Thrones
+        	console.log('bloco dentro da função x: ' + serie)
+        	}
+        }
+
+        x()
+
+       
+         if(true){
+         	//imprime friends por ser global
+        	console.log('global: ' + serie)
+        }
+/*---------------------------------------------------*/
+        
+//Dessa maneira sempre será impressa a variável serie1, pois pois a chamada da função só acontece depois da criação da variável, então ocorre uma elevação da variável para a função (usando o var)
+        function y(){
+
+        	//imprime Game Of Thrones pq está em escopo de função
+        	console.log('função y: ' + serie1)  
+
+        	 if(true){
+        	 	
+        	 	//Continua no escopo da função, então imprime Game Of Thrones
+        	console.log('bloco dentro da função x: ' + serie1)
+
+        	}
+        }
+
+       
+
+       
+         if(true){
+         	//A variável sofre elevação para o escopo global
+         	var serie1 = 'The Walking Dead'
+         	 y()
+         	console.log('bloco global: ' + serie1)
+        }
+
+        console.log('global: ' + serie1)  
+/****************************************************/
+//Variáveis criadas usando let mantém seu escopo onde são criadas
+
+	if(true){
+		let serie2 = 'Narcos'
+		console.log('bloco: 'serie2)
+	}
+
+		//console.log('global: 'serie2)// global irá dar erro
+
+
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

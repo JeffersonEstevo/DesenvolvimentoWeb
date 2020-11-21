@@ -1,0 +1,48 @@
+Comandos para instalação do Sass no linux:
+
+https://scout-app.io/
+
+seleciono o sistema, depois só executar Scout-App
+
+
+
+
+
+OU ENTÃO:
+
+sudo apt install ruby-sass
+
+
+
+
+comandos para instalar package control no sulbime:
+
+import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; ipp = sublime.installed_package_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.proxyHandler() ) ); by = urllib.request.urlopen('http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Erro de validação do download (got %s instead of %s), tente a instalação manual' % (dh, h)) if dh != h else open(os.path.join(ipp, pf), 'wb').write(by)
+
+
+
+///Conversão arquivo .sass para scss:
+no terminal:
+sass arquivo.sass arquivo.scss
+
+
+///Conversão arquivo .scss para css:
+no terminal:
+sass arquivo.scss arquivo.css
+
+
+
+
+//Monitorando arquivo scss, para o css
+:no terminal
+sass --watch arquivo.scss:arquivo.css
+
+
+//caso dê erro no comando acima:
+rm .sass-cache/ -R
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>ES6</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+   //um software de marcenaria
+   //cadeira e sofá
+
+   //paradigma procedural
+
+   //cadeira
+   let qtd_pernas = 4
+   let giratoria = false
+   let cor = 'azul'
+
+
+   //array de cadeiras
+   let cadeiras = Array()
+
+   cadeiras[0] = Array()
+   cadeiras[0]['qtd_pernas'] = 4
+   cadeiras[0]['giratoria'] = false
+   cadeiras[0]['cor'] = 'azul'
+
+   cadeiras[1] = Array()
+   cadeiras[1]['qtd_pernas'] = 1
+   cadeiras[1]['giratoria'] = true
+   cadeiras[1]['cor'] = 'vermelha'
+
+   function girar_cadeira(indice){
+    
+    if(cadeiras[indice]['giratoria'] === true){
+        document.write('girou')
+    }else{
+        document.write('cadeira não é giratória')
+    }
+
+   }
+
+   function adicionar_cadeira(qtd_pernas, giratoria, cor){
+        let cadeira = Array()
+
+        cadeira['qtd_pernas'] = qtd_pernas
+        cadeira['giratoria'] = giratoria
+        cadeira['cor'] = cor
+
+        cadeiras.push(cadeira)
+   }
+
+   adicionar_cadeira(3, false, 'verde')
+   console.log(cadeiras)
+
+  girar_cadeira(0)
+  document.write('<br>')
+   girar_cadeira(1)
+
+/*****************************************************/
+//Paradigma de orientação a objetos
+
+ document.write('<br><br><br><br>')
+
+
+class Cadeira{
+    
+    constructor(qtd_pernas, giratoria, cor){
+
+        this.qtd_pernas = qtd_pernas
+        this.giratoria = giratoria
+        this.cor = cor
+    }
+
+    girarCadeira(){
+      
+        if(this.giratoria === true){
+            document.write('girou')
+        }else{
+             document.write('cadeira não é giratória')
+        }
+
+    }
+
+}
+
+let cadeira1 = new Cadeira(4, false, 'azul')
+let cadeira2 = new Cadeira(1, true, 'vermelha')
+
+document.write('cadeira 1: ' + cadeira1 + '<br><br>')
+
+document.write('<br>cadeira 1 gira?  ')
+ cadeira1.girarCadeira() 
+
+
+
+document.write('<br>cadeira 2 gira?  ')
+ cadeira2.girarCadeira() 
+
+document.write('<br><br>')
+
+let cadeiras1 = Array()
+
+cadeiras1.push(new Cadeira(4, false, 'azul'))
+cadeiras1.push(new Cadeira(1, true, 'verde'))
+
+console.log(cadeiras1)//Array de cadeiras via class
+ 
+
+
+
+
+
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

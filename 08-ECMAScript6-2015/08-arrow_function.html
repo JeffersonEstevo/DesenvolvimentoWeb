@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+       
+       //function arrow serve para simplificar funções anônimas
+
+       /*
+       //função anônima
+       let quadrado = function(x = 5){
+          return x * x
+       }
+       */
+
+       //arrow function do exemplo acima
+      
+       let quadrado = (x) =>{
+        return x * x
+       }
+
+       //arrow function, se for apenas um parâmetro podes escrever masi resumidamente ainda:
+       
+       /*let quadrado = x =>{
+        return x * x
+       }*/
+
+       
+       //podemos ainda omitir o return, usando return implícito
+       /*
+        let quadrado = x => x * x
+       */
+
+       document.write('impressão da função quadrado: ')
+       document.write( quadrado(3) ) 
+
+       document.write('<br>')
+       document.write('<br>')
+       document.write('<br>')
+
+       /*
+       let parOuImpar = function(numero){
+          if(numero % 2 === 0){
+            return 'Par'
+          }else{
+            return 'Ímpar'
+          }
+       }
+       */
+
+       /*
+
+       let parOuImpar = numero =>{
+           if(numero % 2 === 0){
+            return 'Par'
+          }else{
+            return 'Ímpar'
+          }
+       }
+       */
+
+
+       //com operador ternário
+       document.write('impressão da função parOuImpar: ')
+       let parOuImpar = numero => numero % 2 === 0 ? 'Par' : 'Ímpar' // return implícito
+         
+
+       document.write(parOuImpar(9))
+
+{}
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

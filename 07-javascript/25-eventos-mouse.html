@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('</br>')
+
+		function acao(){
+			alert('Evento clique disparado')
+		}
+
+		function acao2(){
+			alert('Duplo clique disparado')
+		}
+
+		function acao3(){
+			alert('Evento soltar botão disparado')
+		}
+
+		function acao4(){
+			alert('Evento mouse sobre elemento disparado')
+		}
+
+		function acao5(){
+			alert('Evento mouse retirado disparado')
+		}
+
+
+	</script>
+	
+</head>
+<body>
+	<div onclick="acao()" style="background: #ccc; height: 80px; width: 80px;"></div></br>
+
+	<div ondblclick="acao2()" style="background: #ccc; height: 80px; width: 80px;"></div></br>
+
+	<div onmouseup="acao3()" style="background: #ccc; height: 80px; width: 80px;"></div></br>
+
+	<div onmouseover="acao4()" style="background: #ccc; height: 80px; width: 80px;"></div></br>
+
+	<div onmouseover="acao4()" onmouseout="acao5()" style="background: #ccc; height: 80px; width: 80px;"></div></br>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+    let assinatura ={
+        idCLiente: 1000,
+        descricao: 'Acesso a internet',
+        status() {
+            console.log('Ativo')
+        }
+    }
+    
+    console.log(assinatura.descricao)
+
+    let y = assinatura // não é uma cópia, apenas apontam para o mesmo local onde está assinatura
+
+    console.log(y.descricao)
+
+/*****************************************************/
+
+y.descricao = 'Internet + tv + telefone' //também modifico assinatura nesse momento, pois apontam para o mesmo local
+
+console.log(assinatura.descricao)
+console.log(y.descricao)
+
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>    

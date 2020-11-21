@@ -1,0 +1,32 @@
+#caixa{
+	width: 300px;
+	height: 300px;
+	background: #b9c941;
+	padding: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/*margin: 10px;*/
+
+
+/*-webkit-border-radius: 5px 20px 60px 100px;
+	-moz-border-radius: 5px 20px 60px 100px;
+	border-radius: 5px 20px 60px 100px;*/
+}
+
+#caixa2{
+	width: 400px;
+	height: 300px;
+	background: #b9c941;
+	
+
+
+/*-webkit-border-radius: 5px 20px 60px 100px;
+	-moz-border-radius: 5px 20px 60px 100px;
+	border-radius: 5px 20px 60px 100px;*/
+}
+
+.arredondamento{
+	border-radius: 400px;
+	/*para imagens o ideal é que a imagem seja quadrada para que possamos arrendondar apenas com css*/
+}

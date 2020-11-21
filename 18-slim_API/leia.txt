@@ -1,0 +1,25 @@
+comandos para instalar composer:
+
+
+//1º
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+
+
+//2º
+php composer-setup.php
+
+
+//3º - criar um "esqueleto" padrão do slim, na versão mais estável:
+php composer.phar create-project slim/slim-skeleton --prefer-dist  
+
+
+
+
+
+4º - rodar comando de criação da tabela produtos com as suas colunas 
+caso o if inicial esteja habilitado para rodar apenas pela linha de comando:
+
+php db.php
+
+

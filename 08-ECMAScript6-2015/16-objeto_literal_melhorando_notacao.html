@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+    let nome = 'Jefferson'
+    let idade = 27
+    let sexo = 'Masculino'
+    let profissao = 'Agente administrativo'
+
+    let objeto = {
+        nome: nome,
+        idade: idade,
+        sexo: sexo,
+        profissao: profissao,
+        exibirResumo: function() {
+            console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}.`)
+        }
+    }
+
+    console.log(objeto)
+    objeto.exibirResumo()
+
+/*****************************************************/
+//melhorando notação a partir do ECMAScript 6
+//podemos resumir o par (chave: valor)
+
+ let objeto2 = {
+        nome,
+        idade,
+        sexo,
+        profissao,
+        exibirResumo() {
+            console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}.`)
+        }
+    }
+
+
+    console.log(objeto2)
+    objeto2.exibirResumo()
+
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>   

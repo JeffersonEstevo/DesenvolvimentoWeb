@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+   
+    //DESTRUCTURING
+
+    //array
+    let arr = [10, 20, 30, 40]
+
+    function teste([ a, b, , c, d = 100]){
+        console.log(a, b, c, d)
+    }
+
+    teste(arr)
+
+
+
+    //objeto
+    let obj = {
+        a: 100,
+        b: 200,
+        c: 300,
+        d: 400
+    }
+
+    function teste2({ a: x, d, z = 1000}){
+
+        console.log(x, d, z)
+    }
+
+    teste2(obj)
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>    

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "estilo.css",
+	"sources": [
+		"../sass/estilo.scss"
+	],
+	"sourcesContent": [
+		"$cor: black;\n\nh2{\n\tcolor: $cor;\n}"
+	],
+	"names": [],
+	"mappings": ";AAEA,AAAA,EAAE,CAAA;EACD,KAAK,EAHA,KAAK;CAIV"
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('</br>')
+
+		// 3 escopos: global , função e bloco
+
+		var serie = 'Friends'
+
+		//escopo de bloco
+		if(true){
+			var serie2 = 'Game of thrones'
+			document.write(serie)
+		}
+
+
+		// aqui acontece uma elevação e a função write consegue acessar variaveis definidas em blocos
+		document.write(serie2)
+
+		document.write('</br>')
+		
+		function x(){
+			//nesse caso a serie3 só funciona no escopo da função x
+			var serie3 = 'The Walking Dead'
+
+			document.write(serie)
+			document.write(serie2) // ok também pode ser impresso
+		}
+		x()
+		
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

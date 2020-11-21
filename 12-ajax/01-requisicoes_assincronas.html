@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Requisições assíncronas</title>
+		
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<script>
+
+//As requisições assíncronas possuem 5 estados(NECESSÁRIOS) de 0 - 4 que podem ser debugadas como mostrado abaixo:
+/*
+			function requisitarPagina(url){
+			let ajax = new XMLHttpRequest();
+
+			//requisição não iniciada, state = 0
+			console.log(ajax.readyState)
+
+			//conexão com o servidor
+			ajax.open('GET', url)
+
+			//conexão estabelecida com o servidor, state = 1
+			console.log(ajax.readyState)
+			
+
+			//precisamos de uma lógica que fique olhando para o progresso da requisição
+			ajax.onreadystatechange = () => {
+				console.log(ajax.readyState)
+			}
+
+			ajax.send()
+			//console.log(ajax)
+
+			}
+*/
+			function requisitarPagina(url){
+
+
+			document.getElementById('conteudo').innerHTML = ''	
+
+
+			//incluir o gif	de loading na página
+			if(!document.getElementById('loading')){
+
+
+				let = imgLoading = document.createElement('img')
+				imgLoading.id = 'loading'
+				imgLoading.src = 'loading.gif'
+				imgLoading.className = 'round mx-auto d-block'  //centraliza a imagem no dentro da div
+
+				//incluindo elemento na div conteudo
+				document.getElementById('conteudo').appendChild(imgLoading)
+			}
+
+			let ajax = new XMLHttpRequest();
+
+			//requisição não iniciada, state = 0
+			//console.log(ajax.readyState)
+
+
+			//conexão com o servidor
+			ajax.open('GET', url)
+
+			//conexão estabelecida com o servidor, state = 1
+			//console.log(ajax.readyState)
+			
+
+			//precisamos de uma lógica que fique olhando para o progresso da requisição
+			ajax.onreadystatechange = () => {
+				if(ajax.readyState == 4 && ajax.status == 200){
+
+					document.getElementById('conteudo').innerHTML = ajax.responseText
+					//removendo o gif de loading quando for capturada a resposta
+					//document.getElementById('loading').remove()
+
+				}
+
+				if(ajax.readyState == 4 && ajax.status == 404){
+
+					document.getElementById('conteudo').innerHTML = 'tente novamente...'
+					//removendo o gif de loading quando for capturada a resposta
+					//document.getElementById('loading').remove()
+
+				}
+			}
+
+			ajax.send()
+			//console.log(ajax)
+
+			}
+
+
+		</script>
+	
+	</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-light bg-light mb-4">
+	      <div class="container">
+	        <div class="navbar-brand mb-0 h1">
+	        	<h3>Requisições síncronas e assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row mb-2">
+	    		<div class="col-md-4 center"></div>
+	    		<div class="col-md-4 center">
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_1_conteudo.php')">Página 1</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_2_conteudo.html')" >Página 2</a>
+	    			<a href="#" class="btn btn-primary" onclick="requisitarPagina('pagina_3_conteudo.html')">Página 3</a>
+	    		</div>
+	    		<div class="col-md-4 center"></div>
+	    	</div>
+	    	
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+
+		    	<div id="conteudo" class="col-md-10"></div>
+		    		
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>

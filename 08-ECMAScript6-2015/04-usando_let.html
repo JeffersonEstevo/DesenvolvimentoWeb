@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+       
+       let serie = 'Firends'
+
+        {
+            let serie = 'The Walking Dead'
+            console.log('dentro do bloco:' + serie)
+        }
+
+         console.log('global: ' + serie)//mantém a variável global criada anteriormente
+
+/****************************************************/
+         
+            //se tentarmos usar o mesmo nome de variável com var e com let irá apresentar erro:
+
+      /*      
+          let serie = 'Firends'
+
+        {
+            var serie = 'The Walking Dead'//aqui acontecerá o erro de conflito dos operadores
+            console.log('dentro do bloco:' + serie)
+        }
+
+         console.log('global: ' + serie)//mantém a variável global criada anteriormente
+    */
+
+         {}//foi necessário para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

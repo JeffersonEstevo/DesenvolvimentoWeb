@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('</br>')
+
+		var nome = 'Jefferson Estevo'
+
+		//propriedade length
+		document.write(nome.length)
+		document.write('</br>')
+
+		// método charAt
+		document.write(nome.charAt(10))
+		document.write('</br>')
+
+		// função indexOf
+		//indica 1ª ocorrência de um caractere específico (retorna -1 caso não exista o caractere)
+		document.write(nome.indexOf('E'))
+		document.write('</br>')
+
+		// método replace
+		//subistitui um trecho por outro na string
+		document.write(nome.replace('Estevo', 'Feitosa'))
+		document.write('</br>')
+
+		// método substr(posicao_inicial, quantidade_a_aprtir_da_posicao_inicial)
+		//
+		//no exemplo: a partir do caractere na 6ª posição retorna 4 próximos caracteres 
+		document.write(nome.substr(6, 4))
+		document.write('</br>')
+
+		// método toLowerCase
+		//converte a string para caixa baixa
+		document.write(nome.toLowerCase())
+		document.write('</br>')
+
+		// método toUpperCase
+		//converte a string para caixa baixa
+		document.write(nome.toUpperCase())
+		document.write('</br>')
+
+		// método trim
+		//remove os espaços em branco nas extremidades da string
+
+		var nome2 = '     Jefferson Estevooo    '
+		document.write('-' + nome2 + '-' + ' sem o método trim')
+		document.write('</br>')
+		document.write('-' + nome2.trim()+ '-' + ' com o método trim')
+		document.write('</br>')
+
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>

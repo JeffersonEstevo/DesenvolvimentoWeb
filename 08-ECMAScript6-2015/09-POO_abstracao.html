@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Var e Let</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+
+    //modelo de objeto 
+    class ContaBancaria {
+        //agencia
+        //numeroConta
+        //saldo
+        //limite
+
+        constructor(){
+            this.agencia = 1075
+            this.numeroConta = 8351125
+            this.saldo = 50
+            this.limite = 450
+        }
+
+        depositar(valorDeposito){
+            this.saldo += valorDeposito
+        }
+
+        sacar(valorSaque){
+            this.saldo -= valorSaque
+        }
+
+        consultarSaldo(){
+            return this.saldo
+        }
+
+    }
+
+
+    let x = new ContaBancaria() // instância da classe (objeto)  conta 1
+    let y = new ContaBancaria() // instância da classe (objeto)  conta 2
+
+    //imprimindo saldo da conta x
+    document.write('saldo da conta x : ')
+    document.write(x.consultarSaldo() + '<br>')
+
+    x.depositar(450)
+    document.write('saldo da conta x após depóstio: ')
+    document.write(x.consultarSaldo() + '<br>')
+
+    x.sacar(200)
+     document.write('saldo da conta x após sacar: ')
+    document.write(x.consultarSaldo() + '<br>')
+
+
+     //imprimindo saldo da conta y, podemos ver que essa conta não foi alterada
+    document.write('saldo da conta y : ')
+    document.write(y.consultarSaldo() + '<br>')
+
+{}//somente para manter a formatação
+    </script>
+
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

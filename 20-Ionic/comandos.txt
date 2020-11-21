@@ -1,0 +1,65 @@
+Comandos e instalação do Ionic:
+//OBS.:npm é o gerenciados de pacotes do node.js que nos permite instalar dependências necessárias no computador
+
+
+1- verificar se o node.js está instalado
+comando: 
+node --version
+
+2- caso o ionic ja esteja instalado, desinstalaremos
+comando:
+npm uninstall -g ionic
+
+se o npm não tiver instalado:
+sudo ap install npm
+
+3- fazendo a instlação global do ionic
+sudo npm install -g @ionic/cli 
+
+4- criar projeto
+	blank - projeto vazio
+	tabs - projetos com abas para navegar
+	sidemenu - projeto com menu lateral
+
+comando:
+ionic start nome_projeto tabs
+
+5- rodar ionic serve na pasta do projeto criado para executar no navegador
+comando:
+estevo@estevo-PC:/var/www/html/DesenvolvimentoWebCompleto/20-Ionic/ionicApp$ ionic serve
+
+6- caso não tenha o @angular/cli instalado, o terminal irá pedir para instalar
+comando:
+basta confirmar que o terminal irá rodar o comando:
+npm i -D -E @angular/cli
+
+7- server deve agora estar rodando em:
+ng run app:serve --host=localhost --port=8100
+
+8- caso dê o erro: [ERROR] ng has unexpectedly closed (exit code 127).
+comando:
+npm install @ionic/app-scripts@latest --save-dev
+
+npm i natives
+
+npm install --save @angular-devkit/build-angular
+
+npm install --save @angular-devkit/build-angular --prod
+
+npm i @angular-devkit/build-angular
+
+
+
+///////////CASO DÊ ERRADO ATÉ AQUI/////////////////////
+
+1- npm cache clean --force
+2- Delete node_modules and package-lock.json
+	npm install --package-lock-only
+3- npm install
+
+instalar o angular de forma global
+comando:
+4- sudo npm install -g angular-cli
+
+
+

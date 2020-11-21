@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+
+		<style>
+			
+			.desfocado{
+				background-color: white;
+			}
+
+			.focado{
+				background-color: green;
+			}
+
+		</style>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+		<script>
+			//método on() / off() -> Registra/remove eventos para os elementos html mesmo que eles sejam criados posteriormente a chamada da função
+
+			$(document).ready(() => {
+				
+				$('body').on('focus', 'input', e => {
+					$(e.target).removeClass('desfocado')
+					$(e.target).addClass('focado')
+
+				})
+
+				$('body').on('blur', 'input', e => {
+					$(e.target).removeClass('focado')
+					$(e.target).addClass('desfocado')
+
+				})
+
+				$('body').append('<br><br> <input type="text" class="desfocado">')
+
+
+				//Para impedir de os eventos continuarem sendo executados, podemos utilizar o método off()
+				//para isso, basta descomnetar o trecho abaixo e executar:
+				//$('body').off('blur', 'input')
+			})
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<input type="text" class="desfocado">
+	</body>
+		
+
+</html>

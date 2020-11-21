@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jogo - Mata Mosquito</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+		<script>
+			
+			function iniciarJogo(){
+				//função que iniciar jogo a partir do nível selecionado
+
+				var nivel = document.getElementById('nivel').value
+
+				if(nivel === ''){
+					alert('Selecione um nível para iniciar o jogo')
+					return false //para finalizar a lógica da função
+				}
+				
+				/*Podemos encaminhar parâmetros
+				para a página html via location
+				separando a página que queremos requisitar dos paraâmetros que desejamos enviar para essa página
+
+				para isso utilizamos ? para separar
+				*/
+				window.location.href = "app.html?" + nivel
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="imagens/game.png">
+					</div>	
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center"> 
+						<div class="mb-2"><!--classe apenas para dar uma margem para o botão de Iniciar que está logo abaixo-->
+							<select id="nivel" class="form-control">
+								
+								
+								<option value="">-- Selecione o nível --</option>
+								<option value="normal">Normal</option>
+								<option value="dificil">Difícil</option>
+								<option value="chucknorris">Chuck Norris</option>
+								
+
+							</select>
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+
+
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+					</div>	
+				</div>
+			</div>
+
+
+		</div> <!--Fim container-->
+
+	</body>
+</html>

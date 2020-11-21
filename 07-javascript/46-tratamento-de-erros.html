@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('</br>')
+		/* Tratamento de erros com try, catch, throw e finally*/
+		/*
+		try = tentar
+		catch = pegar
+		finally = finalmente
+		throw = lanãr
+		*/
+
+
+		//exceção lançada que quebra o andamento do código, se a continuação dos códigos não puderem continuar com tal erro, podemos forçar a parada e mostrar um erro com throw (geralmente é usado após tentativa de resolver o erro no catch)
+		throw new Error('Houve um erro mas não se preocupe, estamos trabahando nisso agora!!')
+
+		//netflix
+		var video = Array()
+
+		video[1] = Array()
+		video[1]['nome'] = 'Fullmetal Alchemist'
+		video[1]['categoria'] = 'Anime'
+
+		function getvideo(video){
+		
+			try{
+
+				//lógica
+				//http
+				console.log(video[0]) //não é erro, apenas retorna undefined pois o vetor começa por 1
+				console.log(video[0]['nome']) // é erro! pois não existe identificador nome para a posição [0]
+
+			} catch(erro){
+				//catch recebe o erro como parametro
+				console.log(erro) // mostra a string do erro que o catch recebeu
+				console.log('Agora sim podemos tratar esse erro')
+			} 
+
+
+			finally{
+				console.log('Sempre passa por aqui (try / catch)')
+			}
+
+			console.log('A aplicação não morreu')
+		}
+
+
+
+
+
+		function tratarErro(e){
+			//possível lógica para tratar erro no servidor (por exemplo)
+			console.log(e)
+		}
+
+		getvideo(video)
+
+	
+	</script>
+	
+</head>
+<body>		
+
+</body>
+</html>

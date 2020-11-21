@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+			
+		var lista_frutas = Array()
+
+		lista_frutas[0] = 'Maçã'
+		lista_frutas[1] = 'Uva'
+		lista_frutas[2] = 'Banana'
+		lista_frutas[3] = 'Morango'
+
+		//método sort() reordena o array alfabeticamente
+		console.log(lista_frutas.sort())
+
+
+/*------------------------------------------*/
+		
+
+		var lista_numeros = Array()
+
+		lista_numeros[0] = 12
+		lista_numeros[1] = 40
+		lista_numeros[2] = 3
+		lista_numeros[3] = 7
+		lista_numeros[4] = 31
+		lista_numeros[5] = 1
+
+		//como fazer para ordenar numericamente
+		//OBS a função passada nao deve ir com ( )
+		//pois ela não deve ser executada no momento da atribuição 
+		//passamos apenas a referência da função como parâmetro
+		console.log(lista_numeros.sort(ordenaNumeros))
+
+		function ordenaNumeros(a, b){
+			
+			return a - b
+
+			//o array deve ter apenas números
+			// < 0 -> a ordenado antes de b
+			// > 0 -> b ordenado antes de a
+			// == -> a ordem é matida
+		}
+
+	</script>
+	
+</head>
+<body>		
+
+</body>
+</html>

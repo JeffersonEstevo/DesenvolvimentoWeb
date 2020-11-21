@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript</title>
+
+	<script>
+		document.write('</br>')
+
+		function calcularArea( largura, comprimento ){
+
+			var area = largura * comprimento
+			
+			return area
+
+		}
+			
+
+			//document.write('Área calculada: ' + calcularArea(15,25) + 'm²')
+
+			var largura = prompt('Digite  a largura: ')
+			var comprimento = prompt('Digite a altura: ')
+
+			var area = calcularArea(largura, comprimento)
+
+			document.write('Área calculada do retângulo: ' + area + 'm²')
+
+			document.write('</br>')
+			function soma(a, b ){
+				return a + b
+			}
+
+			/*OBS.: Podemos passar mais parâmetros do que temos  na assinatura o interpretador desconsidera os parâmetros adicionais
+			*/
+			console.log(soma(7,7))
+			console.log(soma(7,7,9,15))  //apenas ignora 9 e 15
+			console.log(soma(7)) // se for passado so um poarâmetro o interpretador coloca o segundo como undefined (retorna not a number)
+			console.log() // se não for passado nenhum poarâmetro o interpretador coloca os dois como undefined (retorna not a number)
+
+
+		
+	</script>
+	
+</head>
+<body>
+	
+</body>
+</html>
